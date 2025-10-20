@@ -19,8 +19,8 @@ class SMACrossoverStrategy(BaseStrategy):
         sma_fast = close.rolling(self.fast, min_periods=self.fast).mean()
         sma_slow = close.rolling(self.slow, min_periods=self.slow).mean()
 
-        raw = np.where(sma_fast > sma_slow, 1,
-                       np.where(sma_fast < sma_slow, -1, 0))
+        raw = np.where(sma_fast > sma_slow, -1,
+                       np.where(sma_fast < sma_slow, 1, 0))
         if not self.allow_short:
             raw = np.where(raw > 0, 1, 0)
         return pd.Series(raw, index=df.index, dtype=float)

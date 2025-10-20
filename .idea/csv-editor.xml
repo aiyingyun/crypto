@@ -24,6 +24,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/binance/historical_binance/pv/BTCUSDT/BTCUSDT-1m-2025-06-23.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/lib/bt_out/BTCUSDT_2025-06-21_to_2025-07-01_15min_daily_metrics.csv">
           <value>
             <Attribute>

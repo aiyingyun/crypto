@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b49662f9-92d3-4403-8dcb-6d3ffc324690" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="b49662f9-92d3-4403-8dcb-6d3ffc324690" name="Changes" comment="added files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Backtester.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Backtester.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Script_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Script_main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Strategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Strategy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bt_out/BTCUSDT_2025-06-21_to_2025-07-01_15min_daily_metrics.csv" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bt_out/BTCUSDT_2025-06-21_to_2025-07-01_15min_daily_metrics.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bt_out/BTCUSDT_2025-06-21_to_2025-07-01_15min_equity.png" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bt_out/BTCUSDT_2025-06-21_to_2025-07-01_15min_equity.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "aiyingyun"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/aiyingyun/crypto.git",
+    "accountId": "38690ff5-3b2e-4484-8428-fb5d44d8725c"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -43,7 +55,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.Backtester.executor": "Run",
     "Python.CryptoDataLoader.executor": "Debug",
-    "Python.Script_main.executor": "Run",
+    "Python.Script_main.executor": "Debug",
     "Python.pvdata_crawler.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -177,12 +189,25 @@
       <updated>1760903423285</updated>
       <workItem from="1760903424181" duration="4870000" />
       <workItem from="1760909217177" duration="797000" />
-      <workItem from="1760928166224" duration="435000" />
+      <workItem from="1760928166224" duration="2295000" />
     </task>
+    <task id="LOCAL-00001" summary="added files">
+      <option name="closed" value="true" />
+      <created>1760928639162</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760928639162</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added files" />
+    <option name="LAST_COMMIT_MESSAGE" value="added files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -194,8 +219,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/lib/Backtester.py</url>
-          <line>49</line>
-          <option name="timeStamp" value="2" />
+          <line>148</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lib/Backtester.py</url>
+          <line>121</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -204,6 +234,6 @@
     <SUITE FILE_PATH="coverage/crypto$pvdata_crawler.coverage" NAME="pvdata_crawler Coverage Results" MODIFIED="1760903681812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/crypto$CryptoDataLoader.coverage" NAME="CryptoDataLoader Coverage Results" MODIFIED="1760906128545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
     <SUITE FILE_PATH="coverage/crypto$Backtester.coverage" NAME="Backtester Coverage Results" MODIFIED="1760908299341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
-    <SUITE FILE_PATH="coverage/crypto$Script_main.coverage" NAME="Script_main Coverage Results" MODIFIED="1760928385970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
+    <SUITE FILE_PATH="coverage/crypto$Script_main.coverage" NAME="Script_main Coverage Results" MODIFIED="1760930371610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
   </component>
 </project>
