@@ -1,8 +1,9 @@
 # =========================== PROGRAMMATIC API ===========================
 import os
 
-from lib.Backtester import Backtester, SMACrossoverStrategy
+from lib.Backtester import Backtester
 from lib.CryptoDataLoader import CryptoDataLoader
+from lib.Strategy import SMACrossoverStrategy
 
 
 def main(
