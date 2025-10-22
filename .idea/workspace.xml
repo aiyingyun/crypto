@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b49662f9-92d3-4403-8dcb-6d3ffc324690" name="Changes" comment="code update: crawler updates">
-      <change afterPath="$PROJECT_DIR$/lib/BaseStrategy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/FollowVolumeStrategy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/SMACrossoverStrategy.py" afterDir="false" />
+    <list default="true" id="b49662f9-92d3-4403-8dcb-6d3ffc324690" name="Changes" comment="added files and code for strategy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Backtester.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Backtester.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/FollowVolumeStrategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/FollowVolumeStrategy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Script_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Script_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Strategy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bt_out/BTCUSDT_2025-01-01_to_2025-06-30_30min_daily_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bt_out/BTCUSDT_2025-01-01_to_2025-06-30_30min_equity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bt_out/BTCUSDT_2025-06-21_to_2025-10-01_30min_daily_metrics.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bt_out/BTCUSDT_2025-06-21_to_2025-10-01_30min_equity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pvdata_crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/pvdata_crawler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bt_out/BTCUSDT_2025-01-01_to_2025-06-30_30min_FollowVolume_daily_metrics.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bt_out/BTCUSDT_2025-01-01_to_2025-06-30_30min_FollowVolume_equity.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +55,8 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.Backtester.executor": "Run",
     "Python.CryptoDataLoader.executor": "Debug",
-    "Python.Script_main.executor": "Run",
+    "Python.FollowVolumeStrategy.executor": "Run",
+    "Python.Script_main.executor": "Debug",
     "Python.pvdata_crawler.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -80,7 +74,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.pvdata_crawler">
+  <component name="RunManager" selected="Python.Script_main">
     <configuration name="Backtester" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="crypto" />
       <option name="ENV_FILES" value="" />
@@ -119,6 +113,29 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib/DataLoader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FollowVolumeStrategy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="crypto" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lib" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lib/FollowVolumeStrategy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,8 +192,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.pvdata_crawler" />
         <item itemvalue="Python.Script_main" />
+        <item itemvalue="Python.FollowVolumeStrategy" />
+        <item itemvalue="Python.pvdata_crawler" />
         <item itemvalue="Python.Backtester" />
       </list>
     </recent_temporary>
@@ -226,7 +244,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761161844130</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added files and code for strategy">
+      <option name="closed" value="true" />
+      <created>1761174275061</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761174275061</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added files and code for strategy">
+      <option name="closed" value="true" />
+      <created>1761174465352</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761174465352</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +269,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added files" />
     <MESSAGE value="code update: crawler updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="code update: crawler updates" />
+    <MESSAGE value="added files and code for strategy" />
+    <option name="LAST_COMMIT_MESSAGE" value="added files and code for strategy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -250,14 +285,25 @@
           <line>81</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lib/FollowVolumeStrategy.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lib/FollowVolumeStrategy.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/crypto$pvdata_crawler.coverage" NAME="pvdata_crawler Coverage Results" MODIFIED="1761169689838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/crypto$FollowVolumeStrategy.coverage" NAME="FollowVolumeStrategy Coverage Results" MODIFIED="1761175255007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
     <SUITE FILE_PATH="coverage/crypto$CryptoDataLoader.coverage" NAME="CryptoDataLoader Coverage Results" MODIFIED="1760906128545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
     <SUITE FILE_PATH="coverage/crypto$DataLoader.coverage" NAME="DataLoader Coverage Results" MODIFIED="1761080680500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
     <SUITE FILE_PATH="coverage/crypto$Backtester.coverage" NAME="Backtester Coverage Results" MODIFIED="1761157598964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
-    <SUITE FILE_PATH="coverage/crypto$Script_main.coverage" NAME="Script_main Coverage Results" MODIFIED="1761168832356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
+    <SUITE FILE_PATH="coverage/crypto$Script_main.coverage" NAME="Script_main Coverage Results" MODIFIED="1761175596879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
   </component>
 </project>

@@ -9,7 +9,7 @@ from lib.PerformancePlotter import PerformancePlotter
 # ============================== CLI GLUE ===============================
 if __name__ == "__main__":
     symbol = "BTCUSDT"
-    start = "2025-01-01"
+    start = "2024-01-01"
     end = "2025-06-30"
     freq = "1m"
     resample = "30min"
