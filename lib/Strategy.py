@@ -24,3 +24,7 @@ class SMACrossoverStrategy(BaseStrategy):
         if not self.allow_short:
             raw = np.where(raw > 0, 1, 0)
         return pd.Series(raw, index=df.index, dtype=float)
+
+    # always use close for signal?? meaning you have to shift one bar
+    # use open you dont have to shift one bar
+
