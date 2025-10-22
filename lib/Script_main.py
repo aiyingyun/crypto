@@ -3,8 +3,8 @@ import os
 
 from lib.Backtester import Backtester
 from lib.DataLoader import DataLoader
+from lib.FollowVolumeStrategy import FollowVolumeStrategy
 from lib.PerformancePlotter import PerformancePlotter
-from lib.Strategy import SMACrossoverStrategy
 
 # ============================== CLI GLUE ===============================
 if __name__ == "__main__":
@@ -13,8 +13,6 @@ if __name__ == "__main__":
     end = "2025-06-30"
     freq = "1m"
     resample = "30min"
-    fast = 10
-    slow = 30
     notional = 1.0
     tcbps = 0.0
 
@@ -27,7 +25,7 @@ if __name__ == "__main__":
     )
 
     # 2) Strategy
-    strategy = SMACrossoverStrategy(fast=fast, slow=slow, allow_short=False)
+    strategy = FollowVolumeStrategy(allow_short=False)
 
     # 3) Backtest
     bt = Backtester(
@@ -42,7 +40,7 @@ if __name__ == "__main__":
     # 4) Outputs
     outdir = "./bt_out"
     os.makedirs(outdir, exist_ok=True)
-    base = f"{symbol}_{start}_to_{end}_{resample or 'native'}"
+    base = f"{symbol}_{start}_to_{end}_{resample or 'native'}_{strategy.name()}"
     csv_path = os.path.join(outdir, base + "_daily_metrics.csv")
     png_path = os.path.join(outdir, base + "_equity.png")
 

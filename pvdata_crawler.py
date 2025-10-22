@@ -239,6 +239,7 @@ if __name__ == "__main__":
     DATAPATH_CLOUD = Path("/Users/yingyunai/Desktop/crypto")
     print(DATAPATH_CLOUD)
 
-    start = dt.date(2025, 1, 1)
-    process_futures_symbol(symbol="BTCUSDT", root=DATAPATH_CLOUD, start=start)
-    process_spot_symbol(symbol="BTCUSDT", root=DATAPATH_CLOUD, start=start)
+    start = dt.date(2024, 1, 1)
+    end = dt.date(2025, 1, 1)
+    process_futures_symbol(symbol="BTCUSDT", root=DATAPATH_CLOUD, start=start, end=end)
+    process_spot_symbol(symbol="BTCUSDT", root=DATAPATH_CLOUD, start=start, end=end)
