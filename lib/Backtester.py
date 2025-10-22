@@ -32,7 +32,6 @@ class Backtester:
         else:
             sharpe = float("nan")
         total_return = float((1.0 + daily_df["daily_return"]).prod() - 1.0)
-
         return {"bar_df": bar_df, "daily_df": daily_df, "sharpe": sharpe, "total_return": total_return}
 
     # ---------------- core helpers ----------------
@@ -45,40 +44,42 @@ class Backtester:
         4) Compute returns/PnL/turnover on trading cadence
         """
         # --- 1) signals on native ---
-        signals_native = self.strategy.generate_signals(df_native).astype(float)
-        sig_df = df_native[["open_dt"]].copy()
-        sig_df["signal_native"] = signals_native.values
+        signals = self.strategy.generate_signals(df_native)
+        if not {"signal", "signal_ready_time"}.issubset(signals.columns):
+            raise ValueError("Strategy must return ['signal','signal_ready_time']")
+        signals.sort_values("signal_ready_time", inplace=True)
 
         # --- 2) trading bars ---
-        trade_bars = self._build_trade_bars(df_native)  # dt is bar END if resampled
-        # trading returns (close-to-close)
-        trade_close = pd.to_numeric(trade_bars["close"], errors="coerce")
-        trade_ret = trade_close.pct_change().fillna(0.0)
+        trade_bars = self._build_trade_bars(df_native)
+        trade_bars.sort_values("open_dt", inplace=True)
+        trade_bars["ret"] = trade_bars["close"].pct_change().fillna(0.0)
 
         # --- 3) align native signals to trade bar end ---
-        # take the last native signal up to each trade bar end
-        # merge_asof: left=trade bars, right=native signals, direction='backward'
-        aligned = trade_bars.merge(sig_df, on="open_dt", )
-        # realized position = signal at previous TRADE bar close (one-bar delay)
-        position = aligned["signal_native"].shift(1).fillna(0.0)
+        # aligned = trade_bars.merge(signals, left_on="open_dt",
+        #                            right_on="signal_ready_time",
+        #                            how="left")
+        trade_bars.sort_values("close_dt", inplace=True)
+        merged_df = pd.merge_asof(
+            trade_bars,
+            signals,
+            left_on="close_dt",
+            right_on="signal_ready_time",
+            direction="backward",
+            allow_exact_matches=True,
+        )
+        position = merged_df["signal"].ffill().shift(1).fillna(0.0)
 
         # --- 4) turnover, costs, pnl ---
         turnover = (position - position.shift(1)).abs().fillna(position.abs())
-
-        pnl_gross = self.notional * position * trade_ret
+        pnl_gross = self.notional * position * trade_bars["ret"]
         cost_per_unit = (self.transaction_cost_bps / 1e4) * self.notional
         costs = cost_per_unit * turnover if self.transaction_cost_bps > 0 else 0.0
-        pnl_net = pnl_gross - costs
-
-        out = trade_bars.copy()
-        out["ret"] = trade_ret.values
-        out["signal_native_at_trade_close"] = aligned["signal_native"].values
-        out["position"] = position.values
-        out["turnover"] = turnover.values
-        out["pnl_gross"] = pnl_gross.values
-        out["costs"] = costs if np.isscalar(costs) else costs.values
-        out["pnl"] = pnl_net.values
-        return out
+        merged_df['pnl'] = pnl_gross - costs
+        merged_df["position"] = position.values
+        merged_df["turnover"] = turnover.values
+        merged_df["pnl_gross"] = pnl_gross.values
+        merged_df["costs"] = costs if np.isscalar(costs) else costs.values
+        return merged_df
 
     def _daily_group(self, bar_df: pd.DataFrame) -> pd.DataFrame:
         dt = pd.to_datetime(bar_df["open_dt"], utc=True)

@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b49662f9-92d3-4403-8dcb-6d3ffc324690" name="Changes" comment="added files">
-      <change afterPath="$PROJECT_DIR$/lib/PerformancePlotter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/crypto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crypto.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Backtester.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Backtester.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CryptoDataLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DataLoader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DataLoader.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DataLoader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Script_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Script_main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Strategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Strategy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pvdata_crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/pvdata_crawler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bt_out/BTCUSDT_2025-06-21_to_2025-07-01_15min_daily_metrics.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bt_out/BTCUSDT_2025-06-21_to_2025-07-01_15min_equity.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +55,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Backtester.executor": "Debug",
+    "Python.Backtester.executor": "Run",
     "Python.CryptoDataLoader.executor": "Debug",
-    "Python.Script_main.executor": "Run",
+    "Python.Script_main.executor": "Debug",
     "Python.pvdata_crawler.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -77,7 +75,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.pvdata_crawler">
+  <component name="RunManager" selected="Python.Script_main">
     <configuration name="Backtester" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="crypto" />
       <option name="ENV_FILES" value="" />
@@ -172,9 +170,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.pvdata_crawler" />
         <item itemvalue="Python.Script_main" />
         <item itemvalue="Python.Backtester" />
+        <item itemvalue="Python.pvdata_crawler" />
       </list>
     </recent_temporary>
   </component>
@@ -222,8 +220,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/lib/Backtester.py</url>
-          <line>28</line>
+          <line>7</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lib/Backtester.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lib/Strategy.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -232,7 +240,7 @@
     <SUITE FILE_PATH="coverage/crypto$pvdata_crawler.coverage" NAME="pvdata_crawler Coverage Results" MODIFIED="1761151044461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/crypto$CryptoDataLoader.coverage" NAME="CryptoDataLoader Coverage Results" MODIFIED="1760906128545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
     <SUITE FILE_PATH="coverage/crypto$DataLoader.coverage" NAME="DataLoader Coverage Results" MODIFIED="1761080680500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
-    <SUITE FILE_PATH="coverage/crypto$Backtester.coverage" NAME="Backtester Coverage Results" MODIFIED="1761144879038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
-    <SUITE FILE_PATH="coverage/crypto$Script_main.coverage" NAME="Script_main Coverage Results" MODIFIED="1761146924215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
+    <SUITE FILE_PATH="coverage/crypto$Backtester.coverage" NAME="Backtester Coverage Results" MODIFIED="1761157598964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
+    <SUITE FILE_PATH="coverage/crypto$Script_main.coverage" NAME="Script_main Coverage Results" MODIFIED="1761158493876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lib" />
   </component>
 </project>

@@ -1,6 +1,5 @@
 import datetime
 import os
-
 import pandas as pd
 
 DATA_PATH = "/Users/yingyunai/Desktop/crypto/binance/historical_binance/pv"
