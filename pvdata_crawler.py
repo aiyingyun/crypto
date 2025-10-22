@@ -234,6 +234,7 @@ def process_spot_symbol(
         print(f"[{symbol}] spot 1m klines up to date")
 
 
+
 # ------------------------------ CLI entry ------------------------------
 if __name__ == "__main__":
     DATAPATH_CLOUD = Path("/Users/yingyunai/Desktop/crypto")
